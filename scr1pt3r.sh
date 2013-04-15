@@ -1,20 +1,20 @@
-#!/bin/bash
-############################################################################
-#                       COPYRIGHT t193r (2013)                             #
-############################################################################
-# This program is free software: you can redistribute it and/or modify     #
-# it under the terms of the GNU General Public License as published by     #
-# the Free Software Foundation, either version 3 of the License, or        #
-# (at your option) any later version.                                      #
-#                                                                          #
-# This program is distributed in the hope that it will be useful,          #
-# but WITHOUT ANY WARRANTY; without even the implied warranty of           #
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            #
-# GNU General Public License for more details.                             #
-#                                                                          #
-# You should have received a copy of the GNU General Public License        #
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.    #
-############################################################################
+#!/usr/bin/env bash
+########################################################################
+#                       COPYRIGHT t193r (2013)                         #
+########################################################################
+# This program is free software: you can redistribute it and/or modify #
+# it under the terms of the GNU General Public License as published by #
+# the Free Software Foundation, either version 3 of the License, or    #
+# (at your option) any later version.                                  #
+#                                                                      #
+# This program is distributed in the hope that it will be useful,      #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of       #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the        #
+# GNU General Public License for more details.                         #
+#                                                                      #
+# You should have received a copy of the GNU General Public License    #
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.#
+########################################################################
 
 case $1 in
     --weefee|-w) wifi;;
@@ -27,6 +27,11 @@ case $1 in
 esac
 
 trap quit INT
+
+license() {
+  clear
+  man ./COPYING.txt
+}
 
 wifi() {
   clear
@@ -74,21 +79,27 @@ quit() {
 while : ; do
    clear
    cat << BANNER
-========================================
+=====================================================================
+<scr1pt3r>  Copyright (t193r) <2013>  <t193r>
+This program comes with ABSOLUTELY NO WARRANTY; for details choose L.
+This is free software, and you are welcome to redistribute it
+under certain conditions; for details choose L.
+=====================================================================
 -- [C]rack or DoS an Access Point
--- [U]pdate persenjataan hacking
--- Membuat atau memodifikasi [W]ordlist
+-- [U]pdate hacking tools
+-- Creating or modifying [W]ordlist
 -- Check [S]ecurity
 -- [P]ayload builder
--- iptables [R]ules
--- [./t193r.sh --up] update script ini
-========================================
+-- iptables [R]ules, hardening firewall (icewall)
+-- [./scr1pt3r.sh --up] update this script
+=====================================================================
 BANNER
    echo -n "       [Untuk keluar, pilih \"X\"]
-========================================
+=====================================================================
 What do you want today? "
    read choice
    case $choice in
+      L|l) license ;;
       C|c) wifi ;;
       U|u) update ;;
       W|w) wordlist ;;

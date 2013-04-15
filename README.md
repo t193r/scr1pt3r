@@ -42,11 +42,11 @@
                            sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs
                            /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/
 
-t193r adalah komunitas Anonymous Hacker UNPAM, berbasis OS BackTrack, kami membuat script
-untuk mempermudah n00b dan script kiddie untuk mendalami dunia security dan cyber. Script
-ini bersifat open source namun dilindungi oleh lisensi GNU-GPL V3. Jadi, modifikasi
-diperbolehkan dengan mengikuti dan menjunjung tinggi aspek-aspek open source. Kami tidak
-bertanggung jawab atas kerusakan yang ditimbulkan script ini atas bentuk penyalahgunaan.
+t193r adalah komunitas Anonymous Hacker UNPAM, kami membuat script untuk mempermudah
+n00b dan script kiddie untuk mendalami dunia security dan cyber. Script ini bersifat
+open source namun dilindungi oleh lisensi GNU-GPL V3. Jadi, modifikasi diperbolehkan
+dengan mengikuti dan menjunjung tinggi aspek-aspek open source. Kami tidak bertanggung
+jawab atas kerusakan yang ditimbulkan script ini atas bentuk penyalahgunaan.
 
 Script ini memuat beberapa script yang kami buat sendiri, diantaranya:
 
@@ -72,9 +72,15 @@ Script ini memuat beberapa script yang kami buat sendiri, diantaranya:
    tidak mungkin menyerang membabi buta tanpa melakukan pertahanan, kita harus mengetahui
    celah masuk hacker, dan kita akan bebas berkarya di dunia cyber. Script ini belum stabil
    sepenuhnya, silakan baca TODO untuk mengetahui project kami selanjutnya.
+5. payload.sh
+   Adalah script yang ditulis untuk membuat payload dengan msfpayload. Script ini dibuat untuk
+   mempermudah n00b dalam backdoor-ing.
+6. icewall.sh
+   Tujuan utama project ini adalah hardening iptables dengan membuat rules unik untuk memperkuat
+   sistem pertahanan UNIX system.
 
 Kritik dan saran silakan baca di file TODO. Kamu bisa mengirimkan bug report ke alamat email:
-   blusp10it@gmail.com atau doubledragon666@gmail.com
+   doubledragon666@gmail.com
    http://double-dragon.blogspot.com
 ===================================================================================================
                                      Best regard: t193r
