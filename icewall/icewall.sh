@@ -25,6 +25,8 @@ workingDir=$(pwd | awk -F/ '{print $NF}')
 url="http://www.netfilter.org/projects/iptables/files/iptables-1.4.18.tar.bz2"
 controlDir="/etc/iptables"
 
+trap quit INT
+
 if [[ "$distribution" == "Debian" ]]; then
 	iptRepo=$(apt-cache show iptables | grep Version | awk '{print $2}' | sed 's/-.*$//g')
 elif [[ "$distribution" == "arch" ]]; then
@@ -47,6 +49,11 @@ cout() {
 	if [ "$1" == "error" ] ; then output="\e[01;31m[!]\e[00m" ; fi
 	output="$output $2"
 	echo -e "$output"
+}
+
+quit() {
+	cout error "Caught interupt signal. Quiting..."
+	exit
 }
 
 getSource() {

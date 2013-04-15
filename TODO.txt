@@ -45,13 +45,21 @@ Beberapa hal yang bisa dikembangkan dari script ini:
    [KAMI MEMBUTUHKAN IDE DARI PARTISIPAN, KONTAK KAMI DI BAWAH FILE INI]
 3. trigger.sh
    -- Tambahan update dari subversion atau GIT, auto config, auto build ;]
+   -- Banyak update proses yang baru, butuh partisipan
    [KAMI MEMBUTUHKAN IDE DARI PARTISIPAN, KONTAK KAMI DI BAWAH FILE INI]
 4. nakedsec.sh
    -- Cek hak akses file / folder
    -- Cek proses secara lebih rinci untuk mengetahui hak akses dan privilege-nya
+5. payload.sh
+   -- Update framework
+   -- Msfencode support
+6. icewall.sh
+   -- Service daemon untuk iptables
 
 Kami membutuhkan ASCII ART untuk banner script kami, kami juga membutuhkan halaman
 manual penggunaan software.
+
+Kami membutuhkan translator untuk menterjemahkan keseluruhan proyek dengan bahasa inggris.
 
 Kamu bisa mengirimkan bug report, kritik, saran, dan ide ke alamat email:
    doubledragon666@gmail.com
