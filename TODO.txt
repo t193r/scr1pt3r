@@ -1,9 +1,3 @@
-#scr1pt3r
-
-------------------------------------------------------------------------------------------
-
-```
-
                                       -+osssso+-
                                   :ys  -os++so-  sy:
                               `:omMMo    /NN/    oMMmo:`
@@ -40,44 +34,29 @@
                           `NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN`
                            dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
                            sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs
-                           /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/
+                           /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/ 
 
-t193r adalah komunitas Anonymous Hacker UNPAM, berbasis OS BackTrack, kami membuat script
-untuk mempermudah n00b dan script kiddie untuk mendalami dunia security dan cyber. Script
-ini bersifat open source namun dilindungi oleh lisensi GNU-GPL V3. Jadi, modifikasi
-diperbolehkan dengan mengikuti dan menjunjung tinggi aspek-aspek open source. Kami tidak
-bertanggung jawab atas kerusakan yang ditimbulkan script ini atas bentuk penyalahgunaan.
-
-Script ini memuat beberapa script yang kami buat sendiri, diantaranya:
-
+Beberapa hal yang bisa dikembangkan dari script ini:
 1. weefee.sh
-   Adalah script yang ditulis untuk melakukan pendeteksian, peretasan, dan penetrasi pada
-   sebuah jaringan nirkabel (WiFi). Adapun script ini memiliki fitur untuk meretas WPA,
-   WPA2, dan WEP. Script ini masih dalam pengembangan. Silakan baca TODO untuk mengetahui
-   project kami selanjutnya.
+   -- DoS attack wireless / access point
+   -- MDK3
+   -- Benchmarking [hitung mundur kapan proses cracking akan selesai]
 2. deectee.sh
-   Adalah script yang terinspirasi dari script CUPP dan WYD, namun kami perbarui dan kami
-   tambahkan beberapa fitur di dalamnya. Semisal l33t kata-kata. Remove spasi di depan
-   password, remove komentar, split atau menggabungkan wordlsit(s), dan menghapus karakter
-   non-ASCII di dalam wordlsit. Script ini sudah dalam versi stabil, namun masih butuh
-   penambahan beberapa fitur. Silakan baca TODO untuk mengetahui project kami selanjutnya.
+   [KAMI MEMBUTUHKAN IDE DARI PARTISIPAN, KONTAK KAMI DI BAWAH FILE INI]
 3. trigger.sh
-   Adalah BASH script yang berfungsi untuk mempermudah kita dalam melakukan UPDATE pada
-   beberapa tools dalam BackTrack yang tidak tersedia setiap hari di repository utama,
-   seperti Metasploit Framework, SQLMap, Social Engineering Toolkit, W3AF, dan Exploit-DB.
-   Script ini sudah dalam versi paling stabil, namun masih butuh beberapa penambahan dalam
-   fiturnya. Silakan baca TODO untuk mengetahui project kami selanjutnya.
+   -- Tambahan update dari subversion atau GIT, auto config, auto build ;]
+   [KAMI MEMBUTUHKAN IDE DARI PARTISIPAN, KONTAK KAMI DI BAWAH FILE INI]
 4. nakedsec.sh
-   Adalah script yang dirancang untuk mengecek sistem keamanan dari sebuah sistem, kita
-   tidak mungkin menyerang membabi buta tanpa melakukan pertahanan, kita harus mengetahui
-   celah masuk hacker, dan kita akan bebas berkarya di dunia cyber. Script ini belum stabil
-   sepenuhnya, silakan baca TODO untuk mengetahui project kami selanjutnya.
+   -- Cek hak akses file / folder
+   -- Cek proses secara lebih rinci untuk mengetahui hak akses dan privilege-nya
 
-Kritik dan saran silakan baca di file TODO. Kamu bisa mengirimkan bug report ke alamat email:
-   blusp10it@gmail.com atau doubledragon666@gmail.com
+Kami membutuhkan ASCII ART untuk banner script kami, kami juga membutuhkan halaman
+manual penggunaan software.
+
+Kamu bisa mengirimkan bug report, kritik, saran, dan ide ke alamat email:
+   doubledragon666@gmail.com
    http://double-dragon.blogspot.com
 ===================================================================================================
                                      Best regard: t193r
 blusp10it | red-dragon | v10l3t | m0nst3r | mp1k | b0t4x | 'eko | f1r3-c0d3 | alit | burhan | tofik
 ===================================================================================================
-```
