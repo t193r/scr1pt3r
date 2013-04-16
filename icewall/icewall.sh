@@ -24,6 +24,7 @@ distribution=$(lsb_release -i | awk '{print $3}')
 workingDir=$(pwd | awk -F/ '{print $NF}')
 url="http://www.netfilter.org/projects/iptables/files/iptables-1.4.18.tar.bz2"
 controlDir="/etc/iptables"
+cpuCore=$(cat /proc/cpuinfo | grep processor | wc -l)
 
 trap quit INT
 
@@ -57,8 +58,12 @@ quit() {
 }
 
 getSource() {
-	cout action "Creating 'app' directory on home directory"
-	mkdir ~/app
+	if [[ -d ~/app ]]; then
+		cout info "Directory is exist, continuing to install package."
+	else
+		cout action "Creating 'app' directory on home directory"
+		mkdir ~/app
+	fi
 	cout action "Changing directory"
 	cd ~/app
 	cout action "Getting source from $url"
@@ -66,13 +71,15 @@ getSource() {
 	cout action "Extracting source"
 	tar jxpf iptables.tar.bz2
 	cout action "Changing directory to source directory"
-	cd iptables*
+	cd iptables-1.4.18
 	cout action "Configuring..."
 	./configure
 	cout action "Building iptables..."
-	make
+	make -j $cpuCore
 	cout action "Installing"
 	make install
+	cout action "Removing junk file..."
+	rm ~/app/iptables.tar.bz2
 	cout action "Getting back to default directory"
 	cd $defaultDir
 }
@@ -111,19 +118,20 @@ getPackage() {
 }
 
 checkConnection() {
-	/usr/bin/env wget -q --tries=10 --timeout=5 http://www.google.com -O /tmp/index.google &> /dev/null
-	if [ ! -s /tmp/index.google ];then
-		cout info "There's connection. It's OK for now."
-		rm /tmp/index.google
-	else
+	if [[ $(curl --silent google.co.id) == ""  ]];then
 		cout error "There's no connection. Aborting..."
 		exit 2
+	else
+		cout info "There's connection. It's OK for now."
 	fi
 }
 
 # Program running
 if command -v iptables > /dev/null 2>&1 ; then
 	cout info "iptables installed"
+	if [ $(iptables -V | awk {'print $2'}) != 'v1.4.18' ]; then
+		getPackage
+	fi
 else
 	cout error "iptables not installed"
 	getPackage
