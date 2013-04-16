@@ -53,6 +53,7 @@ Beberapa hal yang bisa dikembangkan dari script ini:
 5. payload.sh
    -- Update framework
    -- Msfencode support
+   -- Add C sctyle format to be compiled with mingw32 and mingw64
 6. icewall.sh
    -- Service daemon untuk iptables
 

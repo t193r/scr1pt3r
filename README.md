@@ -70,7 +70,7 @@ Script ini memuat beberapa script yang kami buat sendiri, diantaranya:
    project kami selanjutnya.
 5. payload.sh
    Adalah script yang ditulis untuk membuat payload dengan msfpayload. Script ini dibuat untuk mempermudah
-   n00b dalam backdoor-ing.
+   n00b dalam backdoor-ing dan regenerasi payload.
 6. icewall.sh
    Tujuan utama project ini adalah hardening iptables dengan membuat rules unik untuk memperkuat sistem 
    pertahanan UNIX system.
