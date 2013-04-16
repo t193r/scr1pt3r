@@ -83,10 +83,14 @@ promptInstall() {
 		cin error "Cannot find your spesific distribution. Do you want to install iptables from source? [Y/n]"
 		read choice
 		if [[ "$choice" == "" ]] || [[ "$choice" == *[Yy]* ]]; then
+			loop="false"
 			getSource
 		elif [[ "$choice" == *[Nn]* ]]; then
 			cout error "Not installing iptables. Aborting..."
+			loop="false"
 			exit 0
+		else
+			cout error "Input error"
 		fi
 	done
 }
@@ -133,7 +137,7 @@ fi
 if [[ "$workingDir" == "icewall" ]]; then
 	cout action "Copying configuration"
 	cp ../tools/*.rules $controlDir
-elif [[ "$workingDir" == "t193r" ]]; then
+elif [[ "$workingDir" == "scr1pt3r" ]]; then
 	cout action "Copying configuration"
 	cp tools/*.rules $controlDir
 else
