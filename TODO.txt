@@ -1,40 +1,40 @@
-                                      -+osssso+-
-                                  :ys  -os++so-  sy:
-                              `:omMMo    /NN/    oMMmo:`
-                      `/oyhdmNMMMMMN.   .:dd:.   .MMMMMMNmddys/`
-                      yMMMMMMMMMMMMN`   . yy .   `NMMMMMMMMMMMMy 
-                     .MMMMMMMMMMMMMM.     NN     .MMMMMMMMMMMMMN.
-                     sMMMMMMMMMMMMMM+    .MM.    +MMMMMMMMMMMMMMs
-                    `NMMMMMMMMMMMMMMm    /MM/    mMMMMMMMMMMMMMMN`
-                    -NMMMMMMMMMMMMMMMo   +MM+   oMMMMMMMMMMMMMMMN-
-                    dMMMMMMMMMMMMMMMMM+  oMMo  +MMMMMMMMMMMMMMMMMd
-                   .MMMMMMMMMMMMMMMMMMMs`sMMs`sMMMMMMMMMMMMMMMMMMM.
-                   oMMMMMMMMMMMMMMMMMMMMmdMMdmMMMMMMMMMMMMMMMMMMMMo
-                   dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
-                  .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN.
-                  /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/
-                  sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs
-                  dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
-                  NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN
-                  +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
-                   :mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm:
-                     +mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm+
-                       /hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh/
-                         /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/
-                         oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo
-                         yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy
-                         mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm
-                        `MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM`
-                        :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:
-                        sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs
-                        dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
-                        /smMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMms/
-                          +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
-                          -MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-
-                          `NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN`
-                           dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
-                           sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs
-                           /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/ 
+                                            -+osssso+-
+                                        :ys  -os++so-  sy:
+                                    `:omMMo    /NN/    oMMmo:`
+                            `/oyhdmNMMMMMN.   .:dd:.   .MMMMMMNmddys/`
+                            yMMMMMMMMMMMMN`   . yy .   `NMMMMMMMMMMMMy 
+                           .MMMMMMMMMMMMMM.     NN     .MMMMMMMMMMMMMN.
+                           sMMMMMMMMMMMMMM+    .MM.    +MMMMMMMMMMMMMMs
+                          `NMMMMMMMMMMMMMMm    /MM/    mMMMMMMMMMMMMMMN`
+                          -NMMMMMMMMMMMMMMMo   +MM+   oMMMMMMMMMMMMMMMN-
+                          dMMMMMMMMMMMMMMMMM+  oMMo  +MMMMMMMMMMMMMMMMMd
+                         .MMMMMMMMMMMMMMMMMMMs`sMMs`sMMMMMMMMMMMMMMMMMMM.
+                         oMMMMMMMMMMMMMMMMMMMMmdMMdmMMMMMMMMMMMMMMMMMMMMo
+                         dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
+                        .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN.
+                        /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/
+                        sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs
+                        dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
+                        NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN
+                        +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                         :mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm:
+                           +mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm+
+                             /hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMh/
+                               /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/
+                               oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo
+                               yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy
+                               mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMm
+                              `MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM`
+                              :MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:
+                              sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs
+                              dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
+                              /smMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMms/
+                                +MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+
+                                -MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-
+                                `NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN`
+                                 dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd
+                                 sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs
+                                 /MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM/ 
 
 Beberapa hal yang bisa dikembangkan dari script ini:
 1. weefee.sh
@@ -53,6 +53,7 @@ Beberapa hal yang bisa dikembangkan dari script ini:
 5. payload.sh
    -- Update framework
    -- Msfencode support
+   -- Add C sctyle format to be compiled with mingw32 and mingw64
 6. icewall.sh
    -- Service daemon untuk iptables
 
@@ -64,7 +65,7 @@ Kami membutuhkan translator untuk menterjemahkan keseluruhan proyek dengan bahas
 Kamu bisa mengirimkan bug report, kritik, saran, dan ide ke alamat email:
    doubledragon666@gmail.com
    http://double-dragon.blogspot.com
-===================================================================================================
-                                     Best regard: t193r
-blusp10it | red-dragon | v10l3t | m0nst3r | mp1k | b0t4x | 'eko | f1r3-c0d3 | alit | burhan | tofik
-===================================================================================================
+=============================================================================================================
+                                          Best regard: t193r
+blusp10it | red-dragon | v10l3t | m0nst3r | mp1k | b0t4x | 'eko | f1r3-c0d3 | alit | burhan | tofik | sp00f3r
+=============================================================================================================
