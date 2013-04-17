@@ -60,7 +60,7 @@ nakedsec() {
 
 payload() {
   clear
-  bash payload/payload.sh
+  echo "This function is not stable yet. Please wait for stable version. =)"
 }
 
 rules() {
